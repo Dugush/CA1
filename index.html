@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Enterprise Performance Architecture</title>
+<meta charset="utf-8">
+<style>
+* {
+margin: 0 0 0 0;
+padding: 0 0 0 0
+}
+
+body {
+max-width: 1200px;
+min-width: 800px;
+margin: .5% auto;
+color: #006566;
+background: #ffffff;
+font-family: Microsoft Sans Serif, Lucida Sans, Georgia, helvetica, tahoma, times new roman, Arial;
+font-style: normal;
+font-weight: normal;
+
+}
+
+div.left img, 
+div.middle img, 
+div.fullwidth img  {
+margin: 2% 2%;
+box-shadow: 4px 4px 8px #202020;
+}
+
+div.right img,
+div.left3col img,
+div.cell img {
+display: block;
+max-width: 80%;
+margin: 2% auto;
+border: none;
+box-shadow: 4px 4px 8px #202020;
+}
+
+
+
+form input, form textarea {
+max-width: 100%;
+
+}
+
+
+
+
+header {
+width: 100%;
+background: #006666;
+float: left
+}
+
+header h1{
+color: #efefef;
+font-size: 30px;
+text-align: center;
+padding: 4% 0 0 0
+
+}
+
+header h2{
+color: #efefef;
+font-size: 20px;
+text-align: center;
+padding: 1% 0 4% 0
+
+}
+
+nav {
+width: 96%;
+background: #2e2e2e;
+padding: .5% 2%;
+float: left
+}
+
+div.main {
+width: 99.9%;
+float: left;
+margin: .5% 0;
+border: solid #30BFBF 1px
+}
+
+div.fullwidth {
+width: 96%;
+margin: 1% 2%;
+border: solid #30BFBF 1px
+
+}
+
+
+
+div.left {
+width: 76%;
+margin: 1% 2%;
+float: left;
+border: solid #30BFBF 1px
+}
+
+
+
+div.left3col {
+width:15.5%;
+margin: 1% 0 1% 2%;
+float:left;
+padding: 1% 1%;
+border: solid #30BFBF 1px
+}
+
+div.middle {
+width: 56%;
+margin: 1% 2%;
+float: left;
+border: solid #30BFBF 1px
+}
+
+
+div.right {
+width: 15.5%;
+margin: 1% 2% 1% 0;
+float:left;
+padding: 1% 1%;
+border: solid #30BFBF 1px
+}
+
+
+
+footer {
+width: 100%;
+background: #006666;
+float: left;
+margin: 0 0 .5% 0
+}
+
+div.main h1, div.fullwidth h1 {
+font-size : 24px;
+text-align : center;
+margin: 2% 0 }
+
+div.main h2 ,div.right h2 {
+font-size : 20px;
+text-align : center;
+margin: 2% 0  }
+
+div.main p, div.left p, div.fullwidth p {
+font-size : 16px;
+text-align : left;
+text-indent : 16px ;
+margin: 2% 5% }
+
+div.right p {
+font-size : 14px;
+text-align : left;
+text-indent : 14px ;
+margin: 2% 2% }
+
+
+
+footer p {
+font-size : 14px;
+text-align : center;
+color: #efefef;
+padding: 0 0 .5% 0} 
+
+p a {
+color: #0e0e0e
+}
+
+p a:visited {
+color: #00002b
+}
+
+p.clear {
+clear: both
+}
+
+div.tablecss {
+display: table;
+width: 96%;
+float:left;
+margin: 1% 2%;
+border: solid #30BFBF 1px
+}
+
+div.row{
+width: 100%;
+display: table-row;
+float: left
+}
+
+div.cell {
+display: table-cell;
+float:left;
+width: 33.3%
+}
+
+div.cell a {
+line-height: 200%
+}
+
+form {
+margin: 2% 5%
+}
+
+
+ul.hnavbar{
+	list-style:none;
+                font-size: 16px;
+	font-weight:500;
+	margin-bottom: 0;
+               
+	float:left;
+	width:100%;
+	position:relative;
+	z-index:5;
+   background: #2e2e2e
+   
+	
+}
+ul.hnavbar li{
+	float:left;
+	margin-right:10px;
+	position:relative;
+	width: 15%;
+}
+ul.hnavbar a{
+	display:block;
+	padding:5px;
+	color:#efefef;
+	background:#006666;
+	text-decoration:none;
+	text-align: center;
+
+}
+ul.hnavbar a:hover{
+	color:#CFE6E6;
+	background:#2e2e2e;
+	text-decoration:none;
+}
+
+ul.hnavbar ul{
+	background: transparent; 
+	list-style:none;
+	position:absolute;
+	left:-9999px; 
+}
+ul.hnavbar ul li{
+	padding-top: 0px; 
+	float:none;
+}
+ul.hnavbar ul a{
+	white-space:nowrap; 
+}
+ul.hnavbar li:hover ul{
+	left:0; 
+}
+ul.hnavbar li:hover a{ 
+	background:#30BFBF;
+	text-decoration:none;
+	
+}
+ul.hnavbar li:hover ul a{ 
+	text-decoration:none;
+}
+ul.hnavbar li:hover ul li a:hover{ 
+	background:#000000;
+}
+
+
+
+
+
+
+
+
+</style>
+</head>
+<body>
+
+<header>
+<h1>Enterprise Performance Architecture</h1>
+<h2> CA1 </h2>
+<nav id="navigate">
+      <ul class="hnavbar">
+         <li><a href="index.html">Home</a></li>
+		 <li><a href="index.html">Tiered Application </a></li>
+         <li><a href="index.html">Containerization</a></li>
+         <li><a href="index.html">Disaster Recovery</a></li>
+        <li><a href="index.html">Event Driven Scaling</a></li>
+         <li><a href="index.html">Contact</a></li>
+              </ul>
+           </nav>
+          
+           
+</header>
+<div class="main">
+<div class="left3col">
+<h2>HTML Statistic Page </h2>
+
+
+<p>
+In the beginning I created a single statistic web page by using HTML5 and CSS, the page contain instruction for 4th year computing student on how they can use docker.
+ </p>
+<p>In the HTML statistic page, I included 4 outside links from sources I look at when I was preparing my CA work. <a href="https://www.w3schools.com//" target="_blank">w3school</a>.<p>
+
+
+<h2>CA1folder</h2>
+
+<p>The second step I created a folder called CA1 contain a Dockerfile containing </p>
+     <li> I created a folder called CA1 in google cloud shell then I made repository in my GitHub in the name CA1</li>
+      <li> I used command FOM, COPY, CMD to create   the docker file</li>
+    <li> I used nano text editor to create the html page </li>
+
+<p>In the end created 10 minutes video presentation which documented the details of completing this CA </p>
+</div>
+<div class="middle">
+<h1>A docker tutorial for a 4th year computing audience</h1>
+
+<h2>Docker container</h2>
+<p> Docker is set of platforms as a service which use OS to deliver software in a package named a container. <br>
+Those containers are totally Isolated from each other, they are helping in bring software any where and they handle their software, configuration and libraries file.<p>
+
+
+
+
+<h2>Docker Build</h2>
+<p> In order to create docker file we need to use nano txt editor in cloud shell to open Dock file, we will write or past our text and close the nano text editor<br>
+<br>For the CA the instruction is only use for codes FROM, COPY, RUN and CMD.
+
+<li>From is used for docker hub to deliver the operating system and its version to the image </li>
+<li> copy function is to copy the file from the file system or host and put the file in the image </li>
+<li>To run a command on the image file we used the RUN command </li>
+<li>CMD is used to function on the image , the command give information about the run time and the point of the entry. 
+<a href="https://docs.docker.com/engine/reference/commandline/build/" target="_blank">Docker Documentation </a> </li>
+
+<h3> Example of the command </h3>
+  <br> FROM ubuntu: latest<br>
+   <br> COPY script.sh /<br>
+   <br> RUN chmod u+x /script.sh<br>
+ <br> CMD  /script.sh   <a href="https://stackify.com/docker-build-a-beginners-guide-to-building-docker-images/" target="_blank">Docker Build </a><br>        
+   
+<li>The next step is to save the Docker file by using CTRL+X then letter y and enter</li>
+<li>Then we build the Dockerfile by using command docker build </li>
+<li>Next, we will get an error due to the script.sh file is not created </li>
+<li>We need to use nano text editor to create an script.sh file</li>
+<li>following we add #! /bin/ and script message</li>
+<li>We save the script file and build the docker image for the second time </li>
+ <li>We used command Docker images to show the images that created </li>
+<li> This stage when we use command   docker run image ID we will be able to print the message</li>
+<li> We use command ps -a  to see the container and image ID </li>    
+
+</div>
+
+<div class="right">
+<h2> GitHub.</h2>
+
+<li> Login to GitHub account </li>
+<li> select New Repository </li>
+<li> Give repository a name </li>
+<li> Create Repository </li>
+<li> In command line, type git remote add origin </li>
+<li> Git push origin  </li>
+<li> Refresh GitHub. <a href="https://www.khanacademy.org/computing/computer-programming/html-css/web-development-tools/a/hosting-your-website-on-github/" target="_blank">Github </a>  </li>
+
+
+ 
+<h2>Create a Docker repository </h2>
+
+<li>open the Repositories page in the Cloud Console</li>
+<li>Click Create Repository</li>
+<li>Specify he repository name</li>
+<li>Choose Docker and click create</li>
+
+<h2> Docker image</h2>
+
+<li>Create a Docker repository</li>
+<li>Set up authentication</li>
+<li>Push an image to the repository</li>
+<li>Pull an image from the repository</li>
+<li>To push   image to Container Registry, tag it with the registry name </li>
+<li>To pull from Container Registry, use the command for pulling</li>
+
+
+
+
+</div>
+
+</div>
+<footer>
+<p>&copy; Copyright 2020 All right Enterprise Performance Architecture lecures</p> 
+
+
+</footer>
+
+</body>
+</html>
