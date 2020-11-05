@@ -1,5 +1,5 @@
-FROM python:3
+FROM python:latest
+COPY index.html
 WORKDIR ./
-COPY docker.html /
-CMD python -m http.server 8080
-# Enterprise-Performance-Architecture
+CMD python3 -m http.server 8080
+
